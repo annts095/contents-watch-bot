@@ -24,6 +24,7 @@ Resources:
         Variables:
           TARGET_URL: TARGET_URL
           TARGET_WORD: TARGET_WORD
+          SLACK_WEBHOOK_URL: SLACK_WEB_HOOK_URL
     Metadata: # Manage esbuild properties
       BuildMethod: esbuild
       BuildProperties:
