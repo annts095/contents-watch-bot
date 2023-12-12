@@ -8,7 +8,7 @@ Description: >
 # More info about Globals: https://github.com/awslabs/serverless-application-model/blob/master/docs/globals.rst
 Globals:
   Function:
-    Timeout: 3
+    Timeout: 30
 
 Resources:
   ContentsWatchBotFunction:
@@ -19,6 +19,11 @@ Resources:
       Runtime: nodejs20.x
       Architectures:
         - x86_64
+      MemorySize: 256
+      Environment:
+        Variables:
+          TARGET_URL: TARGET_URL
+          TARGET_WORD: TARGET_WORD
     Metadata: # Manage esbuild properties
       BuildMethod: esbuild
       BuildProperties:
